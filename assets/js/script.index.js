@@ -1,18 +1,19 @@
 const posts = [];
 
 function savePost() {
-    const title = ducument.getElementById("title").value;
-    const resume = ducument.getElementById("resume").value;
-    const author= ducument.getElementById("author").value;
-    const date= ducument.getElementById("date").value;
+    const title = document.getElementById("title").value;
+    const resume = document.getElementById("resume").value;
+    const author= document.getElementById("author").value;
+    const date= document.getElementById("date").value;
     
     if (title && category && resume && author && date) {
         storePost(title, category, resume, author, date)
+        cleanFields()
+        showPosts()
     }else{
         alert("preencha este campo")
     }
-
-    }
+}
 
     function cleanFields() {
         document.getElementById("title").value = "";
@@ -21,17 +22,37 @@ function savePost() {
         document.getElementById("date").value = "";
         }
 
-        function storePost(title, category, resume, author, date) {
+    function storePost(title, category, resume, author, date) {
 
 
-            const post = {
-                title,
-                category,
-                resume,
-                author,
-                date,
+    const post = {
+        title,
+        category,
+        resume,
+        author,
+        date
             };
-            posts.post(post)
+            posts.push(post)
+            console.log(posts)
             }
 
-            
+            function showPosts() {
+                let showContent = "";
+                
+                posts.forEach((post, index) => {
+                    showContent += `
+                    <div class="itemPost">
+                    <h2>${post.title}</h2>
+                    <p><strong>Category: </strong>${post.category}</p>
+                    <p><strong>Resumo: </strong>${post.resume}</p>
+                    <p><strong>Autor: </strong>${post.author}</p>
+                    <p><strong>Data de publicação: </strong>${post.date}</p>
+
+                    button click="editPost(${index})"Editar</button>
+                    button click="deletePost(${index})"Excluir</button>
+                    </div>
+                    `
+                })
+
+                document.getElementById("list").innerHTML = showContent;
+}
