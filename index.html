@@ -12,43 +12,35 @@
 <body>
 
     <main>
-
-        <h1>Próximos Posts</h1>
-
-
+        <h1>Proximos posts</h1>
 
         <div id="postForm">
-
             <div>
-                <label for="title">Titulo</label>
+                <label for="title">titulo</label>
                 <input type="text" id="title" name="title" required />
             </div>
-
             <div>
-                <label for="category">Category</label>
-                <input type="text" id="category" name="category" required />
+                <label for="category">categoria</label>
+                <input type="text" id="category" name="category" required>
+            </div>
+            <div>
+                <label for="resume">resumo</label>
+                <textarea type="text" id="resume" name="resume" rows="4" required></textarea>
             </div>
 
             <div>
-                <label for="resume">Resume</label>
-                <textarea type="text" id="resume" name="resume" rows="4" required> </textarea>
+                <label for="author">autor</label>
+                <input type="text" id="author" name="author" required>
             </div>
 
             <div>
-                <label for="author">Autor</label>
-                <input type="text" id="author" name="author" required />
+                <label for="date">Data de publicação</label>
+                <input type="date" id="date" name="date" required>
             </div>
 
-            <div>
-                <label for="date">Date</label>
-                <input type="date" id="date" name="date" required />
-            </div>
-
-            <button onclick="savePost()">Cadastrar</button>
+            <button onclick="savePost()">CADASTRA</button>
         </div>
-
-        <div id="list"></div>
-
+        <div id="list" class="hidden"></div>
     </main>
 
 </body>

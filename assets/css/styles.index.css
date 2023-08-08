@@ -1,15 +1,14 @@
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 body{
-    background-color: #f0f0f0;
+    background-image: url(../images/logo\ para\ o\ fundo.jfif);
 }
-
 h1{
-    color: #d30000;
+    color: #005b96;
     text-align: center;
 }
 
@@ -26,35 +25,62 @@ main{
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    background-color: #fff;
-
+    background-color: #2a2a2a;
 }
-
-label,
-input,
-textarea{
+label,input,textarea{
     display: block;
     margin-bottom: 10px;
     width: 100%;
     box-sizing: border-box;
     max-width: 500px;
 }
-
 textarea{
     resize: none;
-    max-height: 400px;
 }
-
 button{
-    background-color: #d30000;
-    color: #fff;
-    cursor: pointer;
+    background-color: #005b96;
+    color:#fff;
+    cursor:pointer;
     width: 100%;
     padding: 0.25rem;
     border-radius: 8px;
 }
-
 button:hover{
-    background-color: #a00000;
+    background-color: #005b96;
     transition: 0.3s;
+}
+.itemPost{
+    border:1px solid #ccc;
+   border: 8px;
+   padding: 10px;
+   margin-bottom: 10px;
+}
+.itemPost h2{
+    color: #005b96;
+    margin-bottom: 5px;
+}
+.itemPost button {
+    background-color: #005b96;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 10px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+#list{
+    max-width: 500px;
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+}
+.itemPost button:hover{
+    background-color: #005b96;
+    transition: 0.3s;
+}
+.hidden{
+    display: none
 }
